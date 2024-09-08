@@ -1,0 +1,381 @@
+package com.example.ganacalculator;
+
+
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+public class MainActivity extends AppCompatActivity {
+
+    EditText number1;
+
+    EditText number2;
+    TextView answer;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        number1 = findViewById(R.id.number1);
+        number2 = findViewById(R.id.number2);
+
+        answer = findViewById(R.id.answer);
+
+        Button btn_0 = findViewById(R.id.btn_0);
+        Button btn_1 = findViewById(R.id.btn_1);
+        Button btn_2 = findViewById(R.id.btn_2);
+        Button btn_3 = findViewById(R.id.btn_3);
+        Button btn_4 = findViewById(R.id.btn_4);
+        Button btn_5 = findViewById(R.id.btn_5);
+        Button btn_6 = findViewById(R.id.btn_6);
+        Button btn_7 = findViewById(R.id.btn_7);
+        Button btn_8 = findViewById(R.id.btn_8);
+        Button btn_9 = findViewById(R.id.btn_9);
+        Button btn_add = findViewById(R.id.btn_add);
+        Button btn_sub = findViewById(R.id.btn_sub);
+        Button btn_mul = findViewById(R.id.btn_mul);
+        Button btn_div = findViewById(R.id.btn_div);
+        Button btn_c = findViewById(R.id.btn_c);
+        Button btn_AC = findViewById(R.id.btn_AC);
+        Button btn_sin = findViewById(R.id.btn_sin);
+        Button btn_cos = findViewById(R.id.btn_cos);
+        Button btn_tan = findViewById(R.id.btn_tan);
+        Button btn_ln = findViewById(R.id.btn_ln);
+        Button btn_log = findViewById(R.id.btn_log);
+        Button btn_exp = findViewById(R.id.btn_exp);
+
+        btn_0.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Check which EditText field is currently focused
+                EditText focusedEditText = getCurrentFocus().findViewById(getCurrentFocus().getId());
+                // Append "0" to the current text in the focused EditText field
+                if (focusedEditText != null) {
+                    focusedEditText.append("0");
+                }
+            }
+        });
+
+// Repeat the above pattern for other numeric buttons (btn_1 to btn_9)
+
+        btn_1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Check which EditText field is currently focused
+                EditText focusedEditText = getCurrentFocus().findViewById(getCurrentFocus().getId());
+                // Append "0" to the current text in the focused EditText field
+                if (focusedEditText != null) {
+                    focusedEditText.append("1");
+                }
+            }
+        });
+
+        btn_2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Check which EditText field is currently focused
+                EditText focusedEditText = getCurrentFocus().findViewById(getCurrentFocus().getId());
+                // Append "0" to the current text in the focused EditText field
+                if (focusedEditText != null) {
+                    focusedEditText.append("2");
+                }
+            }
+        });
+
+        btn_3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Check which EditText field is currently focused
+                EditText focusedEditText = getCurrentFocus().findViewById(getCurrentFocus().getId());
+                // Append "0" to the current text in the focused EditText field
+                if (focusedEditText != null) {
+                    focusedEditText.append("3");
+                }
+            }
+        });
+
+        btn_4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Check which EditText field is currently focused
+                EditText focusedEditText = getCurrentFocus().findViewById(getCurrentFocus().getId());
+                // Append "0" to the current text in the focused EditText field
+                if (focusedEditText != null) {
+                    focusedEditText.append("4");
+                }
+            }
+        });
+
+        btn_5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Check which EditText field is currently focused
+                EditText focusedEditText = getCurrentFocus().findViewById(getCurrentFocus().getId());
+                // Append "0" to the current text in the focused EditText field
+                if (focusedEditText != null) {
+                    focusedEditText.append("5");
+                }
+            }
+        });
+
+        btn_6.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Check which EditText field is currently focused
+                EditText focusedEditText = getCurrentFocus().findViewById(getCurrentFocus().getId());
+                // Append "0" to the current text in the focused EditText field
+                if (focusedEditText != null) {
+                    focusedEditText.append("6");
+                }
+            }
+        });
+
+        btn_7.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Check which EditText field is currently focused
+                EditText focusedEditText = getCurrentFocus().findViewById(getCurrentFocus().getId());
+                // Append "0" to the current text in the focused EditText field
+                if (focusedEditText != null) {
+                    focusedEditText.append("7");
+                }
+            }
+        });
+
+
+        btn_8.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Check which EditText field is currently focused
+                EditText focusedEditText = getCurrentFocus().findViewById(getCurrentFocus().getId());
+                // Append "0" to the current text in the focused EditText field
+                if (focusedEditText != null) {
+                    focusedEditText.append("8");
+                }
+            }
+        });
+
+        btn_9.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Check which EditText field is currently focused
+                EditText focusedEditText = getCurrentFocus().findViewById(getCurrentFocus().getId());
+                // Append "0" to the current text in the focused EditText field
+                if (focusedEditText != null) {
+                    focusedEditText.append("9");
+                }
+            }
+        });
+
+
+
+        btn_add.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Get the numbers from the EditText fields
+                String num1Str = number1.getText().toString().trim();
+                String num2Str = number2.getText().toString().trim();
+                // Check if the input is not empty
+                if (!num1Str.isEmpty() && !num2Str.isEmpty()) {
+                    // Convert the strings to doubles
+                    double num1 = Double.parseDouble(num1Str);
+                    double num2 = Double.parseDouble(num2Str);
+                    // Perform addition
+                    double result = num1 + num2;
+                    // Display the result in the TextView
+                    answer.setText(String.valueOf(result));
+                } else {
+                    // Display an error message or handle empty input case
+                    answer.setText("Please enter both numbers");
+                }
+            }
+        });
+
+        btn_sub.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Get the numbers from the EditText fields
+                String num1Str = number1.getText().toString().trim();
+                String num2Str = number2.getText().toString().trim();
+                // Check if the input is not empty
+                if (!num1Str.isEmpty() && !num2Str.isEmpty()) {
+                    // Convert the strings to doubles
+                    double num1 = Double.parseDouble(num1Str);
+                    double num2 = Double.parseDouble(num2Str);
+                    // Perform subtraction
+                    double result = num1 - num2;
+                    // Display the result in the TextView
+                    answer.setText(String.valueOf(result));
+                } else {
+                    // Display an error message or handle empty input case
+                    answer.setText("Please enter both numbers");
+                }
+            }
+        });
+
+        btn_mul.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Get the numbers from the EditText fields
+                String num1Str = number1.getText().toString().trim();
+                String num2Str = number2.getText().toString().trim();
+                // Check if the input is not empty
+                if (!num1Str.isEmpty() && !num2Str.isEmpty()) {
+                    // Convert the strings to doubles
+                    double num1 = Double.parseDouble(num1Str);
+                    double num2 = Double.parseDouble(num2Str);
+                    // Perform multiplication
+                    double result = num1 * num2;
+                    // Display the result in the TextView
+                    answer.setText(String.valueOf(result));
+                } else {
+                    // Display an error message or handle empty input case
+                    answer.setText("Please enter both numbers");
+                }
+            }
+        });
+
+        btn_div.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Get the numbers from the EditText fields
+                String num1Str = number1.getText().toString().trim();
+                String num2Str = number2.getText().toString().trim();
+                // Check if the input is not empty
+                if (!num1Str.isEmpty() && !num2Str.isEmpty()) {
+                    // Convert the strings to doubles
+                    double num1 = Double.parseDouble(num1Str);
+                    double num2 = Double.parseDouble(num2Str);
+                    // Check if num2 is not zero to avoid division by zero
+                    if (num2 != 0) {
+                        // Perform division
+                        double result = num1 / num2;
+                        // Display the result in the TextView
+                        answer.setText(String.valueOf(result));
+                    } else {
+                        // Display an error message for division by zero
+                        answer.setText("Cannot divide by zero");
+                    }
+                } else {
+                    // Display an error message or handle empty input case
+                    answer.setText("Please enter both numbers");
+                }
+            }
+        });
+
+        btn_AC.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Clear the EditText fields
+                number1.setText("");
+                number2.setText("");
+                // Clear the answer TextView
+                answer.setText("");
+            }
+        });
+
+        btn_c.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Check which EditText field is currently focused
+                EditText focusedEditText = getCurrentFocus().findViewById(getCurrentFocus().getId());
+                // Append a decimal point to the current text in the focused EditText field
+                if (focusedEditText != null) {
+                    focusedEditText.append(".");
+                }
+            }
+        });
+
+        btn_sin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String num1Str = number1.getText().toString().trim();
+                if (!num1Str.isEmpty()) {
+                    double num1 = Double.parseDouble(num1Str);
+                    double result = Math.sin(num1); // Calculate sine
+                    answer.setText(String.valueOf(result));
+                } else {
+                    answer.setText("Please enter a number");
+                }
+            }
+        });
+
+        btn_cos.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String num1Str = number1.getText().toString().trim();
+                if (!num1Str.isEmpty()) {
+                    double num1 = Double.parseDouble(num1Str);
+                    double result = Math.cos(num1); // Calculate cosine
+                    answer.setText(String.valueOf(result));
+                } else {
+                    answer.setText("Please enter a number");
+                }
+            }
+        });
+
+        btn_tan.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String num1Str = number1.getText().toString().trim();
+                if (!num1Str.isEmpty()) {
+                    double num1 = Double.parseDouble(num1Str);
+                    double result = Math.tan(num1); // Calculate tangent
+                    answer.setText(String.valueOf(result));
+                } else {
+                    answer.setText("Please enter a number");
+                }
+            }
+        });
+
+        btn_ln.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String num1Str = number1.getText().toString().trim();
+                if (!num1Str.isEmpty()) {
+                    double num1 = Double.parseDouble(num1Str);
+                    double result = Math.log(num1); // Calculate natural logarithm
+                    answer.setText(String.valueOf(result));
+                } else {
+                    answer.setText("Please enter a number");
+                }
+            }
+        });
+
+        btn_log.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String num1Str = number1.getText().toString().trim();
+                if (!num1Str.isEmpty()) {
+                    double num1 = Double.parseDouble(num1Str);
+                    double result = Math.log10(num1); // Calculate base-10 logarithm
+                    answer.setText(String.valueOf(result));
+                } else {
+                    answer.setText("Please enter a number");
+                }
+            }
+        });
+
+        btn_exp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String num1Str = number1.getText().toString().trim();
+                if (!num1Str.isEmpty()) {
+                    double num1 = Double.parseDouble(num1Str);
+                    double result = Math.exp(num1); // Calculate exponentiation
+                    answer.setText(String.valueOf(result));
+                } else {
+                    answer.setText("Please enter a number");
+                }
+            }
+        });
+
+
+
+    }
+}
